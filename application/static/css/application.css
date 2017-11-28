@@ -1,0 +1,80 @@
+h1 {
+	text-align: center;
+}
+.row h2 {
+	text-align: center;
+	color: #F6CED8;
+	text-decoration: underline;
+}
+
+h2 {
+	text-decoration: none;
+	font-family: "Lucida Console" !important;
+	font-weight: 700;
+	font-size: 3.5em !important; 
+}
+
+
+h3 {
+	text-align: center;
+	text-decoration: underline;
+	padding-bottom: 10px;
+}
+h4 {
+	text-decoration: underline;
+}
+
+.container {
+	padding: 15px;
+}
+
+.row p {
+	color: #0489B1;
+}
+
+ul li {
+	display: inline;
+}
+
+.navbar {
+	background-color: #F2F2F2;
+	box-shadow: 0px 5px 5px #111111;
+}
+
+nav{
+	margin-bottom: 0 !important;
+}
+
+footer {
+	background-color: lightgrey;
+}
+
+.jumbotron {
+	background-color: #F2F2F2;
+	text-align: left;
+	background-image: url("https://unsplash.imgix.net/photo-1413920346627-a4389f0abd61?q=75&fm=jpg&s=cfd43f65c77577abb3bf29c0d6a0775f");
+	background-position: center;
+	background-size: 1280px 600px;
+	margin-bottom: 0 !important;
+}
+
+
+.jumbo-font{
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+
+.movie-row{
+	padding-top: 20px;
+	box-shadow: 0px -5px 5px #111111;
+}
+
+#submit-ratings{
+	width:100%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+
+

@@ -1,0 +1,102 @@
+<html>
+	
+	<head>
+    {% load staticfiles %}
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+    <!-- Link to application css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/application.css">
+  </head>
+
+	<body>
+		
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/"><h2 class="pull-right">Privacy Enhanced Recommender</h2></a>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="container body-container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Ratings page</h2>
+          <hr>
+       </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="container">
+            <h1>Please rate the following movies, from 1(very bad) to 5(very good)</h1>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="container item-container">
+          <div class="col-lg-1 recommended-item">
+            <img src="/static/images/example.jpg" alt="Movie Title">
+            <p>Information about the movie</p>
+          </div>
+          <div class="col-lg-1 recommended-item">
+            <img src="/static/images/example.jpg" alt="Movie Title">
+            <p>Information about the movie</p>
+          </div>
+          <div class="col-lg-1 recommended-item">
+            <img src="/static/images/example.jpg" alt="Movie Title">
+            <p>Information about the movie</p>
+          </div>
+          <div class="col-lg-1 recommended-item">
+            <img src="/static/images/example.jpg" alt="Movie Title">
+            <p>Information about the movie</p>
+          </div>
+          <div class="col-lg-1 recommended-item">
+            <img src="/static/images/example.jpg" alt="Movie Title">
+            <p>Information about the movie</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="container">
+            <div class="col-lg-4" id="submit-ratings">
+              <p><a class="btn btn-default" href="/results" role="button">Results</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+      <div class="col-lg-12">
+          <p>&copy; Company 2014</p>
+      </div>
+      
+  </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+	</body>
+
+
+</html>

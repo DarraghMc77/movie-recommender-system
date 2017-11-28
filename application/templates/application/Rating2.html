@@ -1,0 +1,179 @@
+<html>
+
+<head>
+  {% load staticfiles %}
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <!--<link rel="stylesheet" type="text/css" href="RatingCSS.css"-->
+  <!-- Latest compiled and minified JavaScript -->
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="jquery-1.11.2.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $(".star-rating1").click(function(){
+      $(':radio').change(
+        function(){
+            var one = document.getElementByID("radio");
+          });
+    });
+    $(".star-rating2").click(function(){
+      $(':radio').change(
+        function(){
+            var two = document.getElementByID("radio");
+          });
+    });
+    $(".star-rating3").click(function(){
+      $(':radio').change(
+        function(){
+            var three = document.getElementByID("radio");
+          });
+    });
+    $(".star-rating4").click(function(){
+      $(':radio').change(
+        function(){
+            var four = document.getElementByID("radio");
+          });
+    });
+    $(".star-rating5").click(function(){
+      $(':radio').change(
+        function(){
+            var five = document.getElementByID("radio");
+          });
+    });
+  });
+  </script>
+  <!-- Link to application css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/application.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="/"><h2 class="pull-right">Privacy Enhanced Recommender</h2></a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container body-container">
+    <!-- Example row of columns -->
+   <!--  <div class="row">
+      <div class="col-lg-12" align="center">
+        <h1><ins>Ratings Page</ins></h1>
+        <hr>
+      </div>
+    </div>
+ -->
+
+      </div>
+    </div>
+
+          <form action="rate">
+              <div class="col-lg-12">
+                  <fieldset>
+                      <h2>How to rate</h2>
+                      <div class="editor-label">
+                          <label for="Movie1">Movie title and rating</label>
+                      </div>
+                      <div class="editor-field">
+                          <input id="rmovie" name="rmovie" type="text" placeholder="Enter the movie title" value="" autofocus="autofocus" />
+                  <select id="mr" name="mr" >
+                      <option value="1">1</option>
+                      <option value="1.5">1.5</option>
+                      <option value="2">2</option>
+                      <option value="2.5">2.5</option>
+                      <option value="3">3</option>
+                      <option value="3.5">3.5</option>
+                      <option value="4">4</option>
+                      <option value="4.5">4.5</option>
+                      <option value="5">5</option>
+                  </select>
+                      </div>
+                      <label class="Instructions">In order to rate an existing movie find it in the table below, copy the entire cell content as the movie title, select your rating and rate.
+                      <br />
+                      In order to rate a new movie simply enter the movie title (and movie year), select your rating and rate. That movie will be available in the future for all other users.</label>
+                  </fieldset>
+                  <p>
+                      <input type="submit" value="Rate" name="Rate" />
+                  </p>
+              </div>
+          <div>
+              <table> 
+                <thead> 
+                <tr> 
+                  <th>Movie names starting with {{user}}:</th> 
+                </tr> 
+              </thead> 
+              <tbody> 
+                <tr>
+                  <td>
+                    <input type="submit" value="A" name="A" /> <input type="submit" value="B" name="B" /> <input type="submit" value="C" name="C" /> <input type="submit" value="D" name="D" /> <input type="submit" value="E" name="E" /> <input type="submit" value="F" name="F" /> <input type="submit" value="G" name="G" /> <input type="submit" value="H" name="H" /> <input type="submit" value="I" name="I" /> <input type="submit" value="J" name="J" /> <input type="submit" value="K" name="K" /> <input type="submit" value="L" name="L" /> <input type="submit" value="M" name="M" /> <input type="submit" value="N" name="N" /> <input type="submit" value="O" name="O" /> <input type="submit" value="P" name="P" /> <input type="submit" value="Q" name="Q" /> <input type="submit" value="R" name="R" /> <input type="submit" value="S" name="S" /> <input type="submit" value="T" name="T" /> <input type="submit" value="U" name="U" /> <input type="submit" value="V" name="V" /> <input type="submit" value="W" name="W" /> <input type="submit" value="X" name="X" /> <input type="submit" value="Y" name="Y" /> <input type="submit" value="Z" name="Z" /> <input type="submit" value="0" name="0" /> <input type="submit" value="1" name="1" /> <input type="submit" value="2" name="2" /> <input type="submit" value="3" name="3" /> <input type="submit" value="4" name="4" /> <input type="submit" value="5" name="5" /> <input type="submit" value="6" name="6" /> <input type="submit" value="7" name="7" /> <input type="submit" value="8" name="8" /> <input type="submit" value="9" name="9" />
+                  </td> 
+                </tr> 
+              </tbody> 
+            </table>
+          </div>
+          {% if response %}
+            <table id="id_list_table">
+
+                {{movie}
+
+              <tbody>
+                {% for movie in response %}
+                <tr>
+                  <td class="pix20"><img src="{% static "#" %}" alt="Logo img"/></td> <td>{{ movie }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+            <p>
+              {{ note }}
+            </p>
+          {% endif %}
+              {% csrf_token %}
+          </form>
+
+
+
+
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="container">
+          <div class="col-lg-4" id="submit-ratings" align="center">
+            <p><a class="btn btn-default" href="/recommend" role="button">Results</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="col-lg-12">
+      <p>&copy; Company 2014</p>
+    </div>
+
+  </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+  </body>
+
+
+  </html>
